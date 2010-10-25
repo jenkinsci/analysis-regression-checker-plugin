@@ -102,7 +102,7 @@ public class AnalysisRegressionChecker extends Recorder {
 
         @Override
         public String getDisplayName() {
-            return "Fail the build in case of a regression in the code analysis";
+            return "Fail the build if the code analysis worsens";
         }
     }
 }

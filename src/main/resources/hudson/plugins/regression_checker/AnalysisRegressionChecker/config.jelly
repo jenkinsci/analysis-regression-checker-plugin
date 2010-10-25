@@ -24,15 +24,15 @@ THE SOFTWARE.
 
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
   <j:if test="${descriptor.hasFindbugs()}">
-    <f:block>
+    <f:nested>
       <f:checkbox field="checkFindbugs"/>
       <label class="attach-previous">FindBugs</label>
-    </f:block>
+    </f:nested>
   </j:if>
   <j:if test="${descriptor.hasPMD()}">
-    <f:block>
+    <f:nested>
       <f:checkbox field="checkPMD"/>
       <label class="attach-previous">PMD</label>
-    </f:block>
+    </f:nested>
   </j:if>
 </j:jelly>
