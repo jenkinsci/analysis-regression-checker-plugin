@@ -1,0 +1,14 @@
+<pmd version="4.2.5" timestamp="2010-10-25T13:03:57.879">
+  <file name="/tmp/Foo.java">
+    <violation beginline="3" endline="3" begincolumn="17" endcolumn="17" rule="UnusedPrivateField"
+               ruleset="Unused Code Rules" class="Foo" variable="i"
+               externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+      Avoid unused private fields such as 'i'.
+    </violation>
+    <violation beginline="4" endline="4" begincolumn="17" endcolumn="17" rule="UnusedPrivateField"
+               ruleset="Unused Code Rules" class="Foo" variable="j"
+               externalInfoUrl="http://pmd.sourceforge.net/rules/unusedcode.html#UnusedPrivateField" priority="3">
+      Avoid unused private fields such as 'j'.
+    </violation>
+  </file>
+</pmd>
