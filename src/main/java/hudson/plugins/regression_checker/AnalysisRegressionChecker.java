@@ -27,9 +27,11 @@ public class AnalysisRegressionChecker extends Recorder {
     public final boolean checkFindbugs;
 
     @DataBoundConstructor
-    public AnalysisRegressionChecker(boolean checkPMD, boolean checkFindbugs) {
-        this.checkPMD = checkPMD;
-        this.checkFindbugs = checkFindbugs;
+    public AnalysisRegressionChecker(Boolean checkPMD, Boolean checkFindbugs) {
+        // Boolean and not boolean because younger version of Hudson fails to convert null to false
+        // if the plugin is not installed.
+        this.checkPMD = checkPMD!=null && checkPMD;
+        this.checkFindbugs = checkFindbugs!=null && checkFindbugs;
     }
 
     public BuildStepMonitor getRequiredMonitorService() {
