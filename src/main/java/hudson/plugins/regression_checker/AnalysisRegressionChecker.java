@@ -9,7 +9,6 @@ import hudson.model.Result;
 import hudson.plugins.analysis.core.AbstractResultAction;
 import hudson.plugins.analysis.core.BuildResult;
 import hudson.plugins.findbugs.FindBugsResultAction;
-import hudson.plugins.pmd.PmdResult;
 import hudson.plugins.pmd.PmdResultAction;
 import hudson.tasks.BuildStepDescriptor;
 import hudson.tasks.BuildStepMonitor;
@@ -51,11 +50,11 @@ public class AnalysisRegressionChecker extends Recorder {
         T a = build.getAction(resultType);
         if (a!=null) {
             R r = a.getResult();
-            if (r.getDelta()>0) {
-                listener.getLogger().println(Messages.PmdRegressionChecker_RegressionsDetected(a.getDisplayName()));
-                build.setResult(Result.FAILURE);
-                return;
-            }
+//            if (r.getDelta()>0) {
+//                listener.getLogger().println(Messages.PmdRegressionChecker_RegressionsDetected(a.getDisplayName()));
+//                build.setResult(Result.FAILURE);
+//                return;
+//            }
 
             // find the previous successful build
             AbstractBuild<?,?> ref = build.getPreviousBuild();
